@@ -2,9 +2,12 @@ import requests
 
 url = "http://127.0.0.1:11434/api/generate"
 
+# 사용자에게 prompt 입력받기
+user_prompt = input("질문을 입력하세요: ")
+
 data = {
     "model": "gemma3:1b",
-    "prompt": "nvidia는 어떤 회사야?",
+    "prompt": user_prompt,
     "stream": False
 }
 
